@@ -15,6 +15,7 @@ https://github.com/SGKespace/advanced_echo_bot/assets/55636018/092631be-86d7-468
 ## Требования к окружению
 
 Получите токены  [Телеграм](https://t.me/BotFather), затем определите [chat_id](https://t.me/messageinformationsbot)  поместите в переменные окружения (файл .env). ВК: в меню управления сообщества на вкладке API. [Сайт DialogFlow для проекта](https://dialogflow.cloud.google.com/#/login)
+
 Пример файла:
 
 ```
