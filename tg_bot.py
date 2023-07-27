@@ -25,8 +25,9 @@ def help_command(update: Update, context: CallbackContext) -> None:
 
 
 def echo(update: Update, context: CallbackContext) -> None:
-    flowresponse = detect_intent_texts(update.message.text)
-    update.message.reply_text(flowresponse)
+    text = detect_intent_texts(update.message.text)
+    if text:
+        update.message.reply_text(text)
 
 
 def main() -> None:

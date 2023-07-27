@@ -10,11 +10,8 @@ from common_helper_functions import detect_intent_texts
 
 def echo(event, vk_api):
     text = detect_intent_texts(event.text)
-    vk_api.messages.send(
-        user_id=event.user_id,
-        message=text,
-        random_id=random.randint(1,1000)
-    )
+    if text:
+        vk_api.messages.send(user_id=event.user_id, message=text, random_id=random.randint(1, 1000))
 
 
 if __name__ == "__main__":
