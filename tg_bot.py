@@ -3,6 +3,9 @@ import os
 from dotenv import load_dotenv
 from telegram import Update, ForceReply
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
+from google.cloud import dialogflow
+
+from common_helper_functions import detect_intent_texts
 
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
@@ -26,23 +29,9 @@ def echo(update: Update, context: CallbackContext) -> None:
     update.message.reply_text(flowresponse)
 
 
-def detect_intent_texts(text, language_code="ru"):
-    from google.cloud import dialogflow
-    session_client = dialogflow.SessionsClient()
-    session = session_client.session_path(os.environ["PROJECT_ID"], os.environ["PROJECT_ID"])
-    text_input = dialogflow.TextInput(text=text, language_code=language_code)
-    query_input = dialogflow.QueryInput(text=text_input)
-    response = session_client.detect_intent(
-        request={"session": session, "query_input": query_input}
-    )
-    return response.query_result.fulfillment_text
-
-
 def main() -> None:
     load_dotenv()
     telegram_token = os.environ["TELEGRAM_TOKEN"]
-    dialogflow_project_id = os.environ["PROJECT_ID"]
-    project_id = os.environ["PROJECT_ID"]
 
     updater = Updater(telegram_token)
     dispatcher = updater.dispatcher
