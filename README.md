@@ -14,7 +14,8 @@ https://github.com/SGKespace/advanced_echo_bot/assets/55636018/092631be-86d7-468
 
 ## Требования к окружению
 
-Получите токены  [Телеграм](https://t.me/BotFather), затем определите [chat_id](https://t.me/messageinformationsbot)  поместите в переменные окружения (файл .env). Пример файла:
+Получите токены  [Телеграм](https://t.me/BotFather), затем определите [chat_id](https://t.me/messageinformationsbot)  поместите в переменные окружения (файл .env). ВК: в меню управления сообщества на вкладке API. [Сайт DialogFlow для проекта](https://dialogflow.cloud.google.com/#/login)
+Пример файла:
 
 ```
 TELEGRAM_TOKEN="63576433268:AAECYahvjljghkh7685694"
@@ -41,7 +42,7 @@ vk-api==11.9.9
 PIP install -r requirement.txt
 ```
 
-# Опписание  файлов
+# Описание файлов
 - tg_bot.py скрипт автоответчика в Телеграм
 - vk_bot.py скрипт автоответчика в ВК
 - common_helper_functions.py общие библиотеки для работы скриптов
