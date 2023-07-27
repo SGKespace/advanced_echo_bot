@@ -18,6 +18,7 @@ https://github.com/SGKespace/advanced_echo_bot/assets/55636018/092631be-86d7-468
 
 ```
 TELEGRAM_TOKEN="63576433268:AAECYahvjljghkh7685694"
+TELEGRAM_TOKEN_LOG="63576433268:AAECYahvjljghkh7685694"
 TG_CHAT_ID=123456789
 PROJECT_ID="ert-dfg"
 GOOGLE_APPLICATION_CREDENTIALS='/Users/sgk/.config/gcloud/credentials.json'
