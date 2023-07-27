@@ -1,5 +1,5 @@
 # advanced_echo_bot
-Боты автоматически отвечающие пользователю в Телеграм и ВК
+Боты автоматически отвечающие пользователю в Телеграм и ВК. Если возникает ошибка приходит сообщение в Телеграм бот (TELEGRAM_TOKEN_LOG, TG_CHAT_ID_LOG см. файл .env)
 
 Пример работы в Телеграм 
 
@@ -19,8 +19,8 @@ https://github.com/SGKespace/advanced_echo_bot/assets/55636018/092631be-86d7-468
 ```
 TELEGRAM_TOKEN="63576433268:AAECYahvjljghkh7685694"
 TELEGRAM_TOKEN_LOG="63576433268:AAECYahvjljghkh7685694"
-TG_CHAT_ID=123456789
-PROJECT_ID="ert-dfg"
+TG_CHAT_ID_LOG=123456789
+GOOGLE_CLOUD_PROJECT="ert-dfg"
 GOOGLE_APPLICATION_CREDENTIALS='/Users/sgk/.config/gcloud/credentials.json'
 VK_TOKEN='vk1.a.ldsdgdvgsvc9-5nsgHA9_lkOxEGGJGJGxF-ZtWJHGGUYTfajmak6yosrqEKvGCWWGHJggjhlkhluiOHvRiRI2q7HQr7Jwpbx4k1E79Qs9PKbBY-a3BgHGJHGKGGGKJJKHKbkgkgleF0lZEv0e4usc74Cfc_YG-z3ZDYn5FJCJHHKJHggjgjgGKHLIIYHhZ9U5lczxZlw'
 
