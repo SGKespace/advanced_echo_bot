@@ -61,7 +61,6 @@ python create_intent.py
 # Описание файлов
 - tg_bot.py скрипт автоответчика в Телеграм
 - vk_bot.py скрипт автоответчика в ВК
-- common_helper_functions.py общие библиотеки для работы скриптов
 - requirements.txt пример файла для тренировки Google DialogFlow
 - create_intent.py скрипт для тренировки Google DialogFlow
 - questions.json пример файла для тренировки
