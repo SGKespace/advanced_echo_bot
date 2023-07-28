@@ -43,12 +43,28 @@ vk-api==11.9.9
 PIP install -r requirement.txt
 ```
 
+Запускать ботов осууществляетс с помощью команд
+
+``` 
+python tg_bot.py
+python vk_bot.py
+```
+
+# "Тренировка" бота
+Рзместите файл questions.json рядом с create_intent.py
+Натренировать бота можно с помощью скрипта create_intent.py, который запускается следующей командой
+
+``` 
+python create_intent.py
+``` 
+
 # Описание файлов
 - tg_bot.py скрипт автоответчика в Телеграм
 - vk_bot.py скрипт автоответчика в ВК
 - common_helper_functions.py общие библиотеки для работы скриптов
 - requirements.txt пример файла для тренировки Google DialogFlow
 - create_intent.py скрипт для тренировки Google DialogFlow
+- questions.json пример файла для тренировки
 
 ## Отказ от ответственности
 
