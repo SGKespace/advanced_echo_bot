@@ -14,9 +14,8 @@ logger = logging.getLogger(__name__)
 
 def generic_response(update: Update, context: CallbackContext, project_id) -> None:
     session_id = update.effective_chat.id
-    text = detect_intent_texts(project_id, session_id, update.message.text)
-    if text:
-        update.message.reply_text(text)
+    flow_response = detect_intent_texts(project_id, session_id, update.message.text)
+    update.message.reply_text(flow_response.query_result.fulfillment_text)
 
 
 def main() -> None:

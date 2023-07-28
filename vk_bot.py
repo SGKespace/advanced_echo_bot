@@ -17,10 +17,13 @@ logger = logging.getLogger(__name__)
 def generic_response(event, vk_api, project_id):
     user_id = event.user_id
     message = event.text
-    text = detect_intent_texts(project_id=project_id, session_id=user_id, text=message)
-
-    if text:
-        vk_api.messages.send(user_id=event.user_id, message=text, random_id=random.randint(1, 1000))
+    flow_response = detect_intent_texts(project_id=project_id, session_id=user_id, text=message)
+    if not flow_response.query_result.intent.is_fallback:
+        vk_api.messages.send(
+            user_id=event.user_id,
+            message=flow_response.query_result.fulfillment_text,
+            random_id=random.randint(1, 1000)
+        )
 
 
 if __name__ == "__main__":
