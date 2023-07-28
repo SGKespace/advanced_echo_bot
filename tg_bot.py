@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 from telegram import Update, Bot
 from telegram.ext import Updater, MessageHandler, Filters, CallbackContext
 
-from common_helper_functions import TelegramLogHandler
-from common_helper_functions import detect_intent_texts
+from logger import TelegramLogHandler
+from detect_intent import detect_intent_texts
 
 logger = logging.getLogger(__name__)
 
